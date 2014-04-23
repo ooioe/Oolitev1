@@ -156,6 +156,7 @@ platform_check_image() {
 	tl-wa901nd | \
 	tl-wa901nd-v2 | \
 	tl-wdr4300 | \
+	gs-oolite | \
 	tl-wr703n | \
 	tl-wr741nd | \
 	tl-wr741nd-v4 | \

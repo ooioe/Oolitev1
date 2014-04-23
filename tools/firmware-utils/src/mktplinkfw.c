@@ -32,6 +32,7 @@
 #define HEADER_VERSION_V1	0x01000000
 #define HWID_TL_MR3020_V1	0x30200001
 #define HWID_TL_MR3220_V1	0x32200001
+#define HWID_GS_OOLITE_V1	0x3C000101
 #define HWID_TL_MR3420_V1	0x34200001
 #define HWID_TL_WA701N_V1	0x07010001
 #define HWID_TL_WA7510N_V1	0x75100001
@@ -173,6 +174,29 @@ static struct flash_layout layouts[] = {
 		.kernel_ep	= 0x80060000,
 		.rootfs_ofs	= 0x100000,
 	}, {
+		.id		= "16M",
+		.fw_max_len	= 0xfc0000,
+		.kernel_la	= 0x80060000,
+		.kernel_ep	= 0x80060000,
+		.rootfs_ofs	= 0x140000,
+ 	}, {
+		.id		= "16Mlzma",
+		.fw_max_len	= 0xfc0000,
+		.kernel_la	= 0x80060000,
+		.kernel_ep	= 0x80060000,
+		.rootfs_ofs	= 0x100000,
+	}, {
+		.id		= "32M",
+		.fw_max_len	= 0x1fc0000,
+		.kernel_la	= 0x80060000,
+		.kernel_ep	= 0x80060000,
+		.rootfs_ofs	= 0x140000,
+ 	}, {
+		.id		= "32Mlzma",
+		.fw_max_len	= 0x1fc0000,
+		.kernel_la	= 0x80060000,
+		.kernel_ep	= 0x80060000,
+		.rootfs_ofs	= 0x100000,
 		/* terminating entry */
 	}
 };
@@ -289,6 +313,10 @@ static struct board_info boards[] = {
 		.hw_rev		= 1,
 		.layout_id	= "4Mlzma",
 	}, {
+		.id		= "GS-OOLITEv1",
+		.hw_id		= HWID_GS_OOLITE_V1,
+		.hw_rev		= 1,
+		.layout_id	= "8Mlzma",  //8M,16M optional
 		/* terminating entry */
 	}
 };

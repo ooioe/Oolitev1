@@ -72,6 +72,9 @@ tplink_board_detect() {
 	hwver="v${hwver#0}"
 
 	case "$hwid" in
+	"000101"*)
+		model="GS OOLITE"
+		;;
 	"070300"*)
 		model="TP-Link TL-WR703N"
 		;;
@@ -147,6 +150,9 @@ ar71xx_board_detect() {
 	machine=$(awk 'BEGIN{FS="[ \t]+:[ \t]"} /machine/ {print $2}' /proc/cpuinfo)
 
 	case "$machine" in
+	*"Oolite V1.0")
+		name="gs-oolite"
+		;;
 	*"AirRouter")
 		name="airrouter"
 		;;
