@@ -17,7 +17,7 @@
 #include "dev-gpio-buttons.h"
 #include "dev-leds-gpio.h"
 #include "dev-m25p80.h"
-#include "eeprom.h"
+/*#include "eeprom.h"*/
 #include "dev-wmac.h"
 #include "machtypes.h"
 #include "dev-usb.h"
